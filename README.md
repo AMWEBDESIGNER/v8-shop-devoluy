@@ -4,8 +4,8 @@ Maquette indépendante d’un site de marque pour **V8 Shop**, magasin de locati
 
 ## Liens
 
-- Site Cloudflare Pages : à renseigner après publication
-- Dépôt GitHub : à renseigner après publication
+- Site Cloudflare Pages : [v8-shop-devoluy.pages.dev](https://v8-shop-devoluy.pages.dev)
+- Dépôt GitHub : [AMWEBDESIGNER/v8-shop-devoluy](https://github.com/AMWEBDESIGNER/v8-shop-devoluy)
 - Réservation actuelle : [page V8 Shop sur Ski Republic](https://www.ski-republic.com/stations-ski/la-joue-du-loup/v8-shop)
 - Téléphones publics : 04 92 21 80 51 / 06 41 61 81 39
 
