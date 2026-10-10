@@ -1,113 +1,318 @@
 <!doctype html>
 <html lang="fr" data-season="winter">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0d0e10">
-  <meta name="description" content="V8 Shop, location de ski, snowboard, snowscoot, VTT et fatbike sur le front de neige de La Joue du Loup.">
-  <title>V8 Shop — Ski / Ride / Repeat</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/geist.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="assets/geist-mono.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="complete.css">
-</head>
-<body>
-  <div class="boot" aria-hidden="true"><div class="boot-logo"><b>V<sup>8</sup></b><span>SHOP</span></div><p>Calibrage du matériel</p><i></i></div>
-  <canvas id="trail" aria-hidden="true"></canvas>
-  <div class="crosshair" aria-hidden="true"><i></i></div>
-
-  <header class="header">
-    <a href="#top" class="logo brand-photo" aria-label="V8 Shop, retour en haut"><img src="assets/logo-original.webp" alt="V8 Shop"></a>
-    <nav aria-label="Navigation"><a href="location.html">Location</a><a href="atelier.html">Atelier</a><a href="pro-shop.html">Pro shop</a><a href="infos-pratiques.html">Infos</a></nav>
-    <div class="season-switch" role="group" aria-label="Changer de saison"><button class="active" data-season="winter">Neige</button><button data-season="summer">Terre</button><i></i></div>
-    <a class="reserve" href="https://www.ski-republic.com/stations-ski/la-joue-du-loup/v8-shop" target="_blank" rel="noopener">Réserver <span>↗</span></a>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <p class="status reveal"><i></i> Front de neige · La Joue du Loup</p>
-        <h1><span>SKI</span><span class="slash">/</span><span class="summer-word">BIKE</span><br><em>RIDE</em><br><strong>REPEAT.</strong></h1>
-        <p class="hero-text reveal">Location et pro shop au pied des pistes. Du ski au fatbike, l’équipe prépare le matériel qui colle à votre terrain.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d0e10" />
+    <meta
+      name="description"
+      content="V8 Shop, location de ski, snowboard, snowscoot, VTT et fatbike sur le front de neige de La Joue du Loup."
+    />
+    <title>V8 Shop — Ski / Ride / Repeat</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/geist.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/geist-mono.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="complete.css" />
+  </head>
+  <body>
+    <div class="boot" aria-hidden="true">
+      <div class="boot-logo">
+        <b>V<sup>8</sup></b
+        ><span>SHOP</span>
       </div>
-      <div class="hero-machine" data-tilt>
-        <div class="v8-core"><span>V</span><b>8</b></div>
-        <div class="ring ring-a"></div><div class="ring ring-b"></div><div class="ring ring-c"></div>
-        <div class="telemetry"><span>ALT</span><b>1500</b><small>M</small></div>
+      <p>Calibrage du matériel</p>
+      <i></i>
+    </div>
+    <canvas id="trail" aria-hidden="true"></canvas>
+    <div class="crosshair" aria-hidden="true"><i></i></div>
+
+    <header class="header">
+      <a
+        href="#top"
+        class="logo brand-photo"
+        aria-label="V8 Shop, retour en haut"
+        ><img src="assets/logo-original.webp" alt="V8 Shop"
+      /></a>
+      <nav aria-label="Navigation">
+        <a href="location.html">Location</a><a href="atelier.html">Atelier</a
+        ><a href="pro-shop.html">Pro shop</a
+        ><a href="infos-pratiques.html">Infos</a>
+      </nav>
+      <div class="season-switch" role="group" aria-label="Changer de saison">
+        <button class="active" data-season="winter">Neige</button
+        ><button data-season="summer">Terre</button><i></i>
       </div>
-      <div class="hero-side"><span>SCROLL TO DROP</span><i></i><b>05° 52' 20" E</b></div>
-      <div class="ticker"><div><span>SKI ALPIN</span><i>✦</i><span>SNOWBOARD</span><i>✦</i><span>SNOWSCOOT</span><i>✦</i><span>FATBIKE</span><i>✦</i><span>VTT ÉLECTRIQUE</span><i>✦</i></div><div aria-hidden="true"><span>SKI ALPIN</span><i>✦</i><span>SNOWBOARD</span><i>✦</i><span>SNOWSCOOT</span><i>✦</i><span>FATBIKE</span><i>✦</i><span>VTT ÉLECTRIQUE</span><i>✦</i></div></div>
-    </section>
+      <a
+        class="reserve"
+        href="https://www.ski-republic.com/stations-ski/la-joue-du-loup/v8-shop"
+        target="_blank"
+        rel="noopener"
+        >Réserver <span>↗</span></a
+      >
+    </header>
 
-    <section class="intro" id="rental">
-      <div class="intro-label reveal"><span>01</span><p>Terrain first</p></div>
-      <div class="intro-copy"><h2 class="line-reveal">Le bon matériel.<br><em>Le bon réglage.</em><br>Zéro détour.</h2><div class="intro-bottom reveal"><p>Sur le front de neige, l’équipe V8 vous oriente vers l’équipement adapté à votre niveau et à votre pratique, hiver comme été.</p><a href="#ranges">Choisir son ride <span>↘</span></a></div></div>
-    </section>
-
-    <section class="split-scene">
-      <figure class="photo-panel image-in"><img src="assets/fatbike.webp" alt="Groupe équipé de fatbikes devant V8 Shop" loading="lazy"><figcaption><span>MODE // TERRE</span><b>Fatbike électrique</b></figcaption></figure>
-      <div class="data-panel">
-        <div class="radar" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
-        <p class="reveal">DEUX SAISONS<br>UN SEUL POINT DE DÉPART</p>
-        <div class="data-row"><span>ÉQUIPEMENT</span><b id="gear-label">SKI / SNOW</b></div>
-        <div class="data-row"><span>TERRAIN</span><b id="terrain-label">100 KM DE PISTES</b></div>
-        <div class="data-row"><span>DÉPART</span><b>FRONT DE NEIGE</b></div>
-      </div>
-    </section>
-
-    <section class="ranges" id="ranges">
-      <div class="section-head reveal"><span>02 / LE MATÉRIEL</span><h2>Pick your<br><em>line.</em></h2><p>La disponibilité et les gammes exactes sont à confirmer en magasin. Réservation ski via Ski Republic.</p></div>
-      <div class="range-list">
-        <article class="range-card reveal" data-index="01"><div class="range-icon skis" aria-hidden="true"><i></i><i></i></div><span>HIVER</span><h3>Ski alpin</h3><p>Du débutant au skieur confirmé.</p><b>01</b></article>
-        <article class="range-card reveal" data-index="02"><div class="range-icon board" aria-hidden="true"><i></i></div><span>HIVER</span><h3>Snowboard</h3><p>Planches, boots et casques.</p><b>02</b></article>
-        <article class="range-card reveal" data-index="03"><div class="range-icon wheel" aria-hidden="true"><i></i></div><span>4 SAISONS</span><h3>Fatbike</h3><p>Assistance électrique, gros grip.</p><b>03</b></article>
-        <article class="range-card reveal" data-index="04"><div class="range-icon frame" aria-hidden="true"><i></i></div><span>ÉTÉ</span><h3>VTT</h3><p>Enduro, DH et assistance électrique.</p><b>04</b></article>
-      </div>
-    </section>
-
-    <section class="workshop" id="workshop">
-      <figure class="workshop-photo image-in"><img src="assets/interior.webp" alt="Intérieur et espace équipement V8 Shop" loading="lazy"></figure>
-      <div class="workshop-copy">
-        <p class="mono reveal">03 / WORKSHOP</p>
-        <h2 class="line-reveal">Affûté.<br>Réglé.<br><em>Prêt.</em></h2>
-        <p class="reveal">Entretien du matériel et vente technique : le shop accompagne la glisse avant, pendant et après la sortie.</p>
-        <ul class="service-list">
-          <li class="reveal"><span>01</span> Entretien ski & snowboard <i>↗</i></li>
-          <li class="reveal"><span>02</span> Réglage selon le niveau <i>↗</i></li>
-          <li class="reveal"><span>03</span> Accessoires & casques <i>↗</i></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="shop" id="shop">
-      <div class="shop-top"><p class="mono reveal">04 / PRO SHOP</p><h2 class="line-reveal">Performance<br><em>inside.</em></h2></div>
-      <div class="shop-gallery">
-        <figure class="image-in"><img src="assets/skis.webp" alt="Parc de skis disponible devant V8 Shop" loading="lazy"><figcaption>Parc ski</figcaption></figure>
-        <figure class="image-in"><img src="assets/sign.webp" alt="Enseigne V8 Shop location ski et VTT" loading="lazy"><figcaption>V8 Shop</figcaption></figure>
-        <div class="brand-block reveal"><span>PRO SHOP</span><b>OAKLEY<br>FOX<br>HEAD<br>K2</b><p>Marques visibles sur la signalétique officielle du magasin.</p></div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="contact-photo"><img src="assets/shop.webp" alt="V8 Shop sur le front de neige de La Joue du Loup" loading="lazy"></div>
-      <div class="contact-overlay"></div>
-      <div class="contact-content">
-        <p class="mono reveal">FRONT DE NEIGE · 1500 M</p>
-        <h2>Ready to<br><em>ride?</em></h2>
-        <div class="contact-grid">
-          <div class="reveal"><span>V8 SHOP</span><p>Place des Argousiers<br>05250 La Joue du Loup</p><a href="https://www.google.com/maps/search/?api=1&query=V8+Shop+La+Joue+du+Loup" target="_blank" rel="noopener">Itinéraire ↗</a></div>
-          <div class="reveal"><span>CONTACT</span><p><a href="tel:+33492218051">04 92 21 80 51</a><br><a href="tel:+33641618139">06 41 61 81 39</a></p></div>
-          <div class="reveal"><span>OUVERTURE ANNONCÉE</span><p>7 jours sur 7<br>08:30 — 19:00</p><small>Sur les périodes saisonnières officielles.</small></div>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="status reveal"><i></i> Front de neige · La Joue du Loup</p>
+          <h1>
+            <span>SKI</span><span class="slash">/</span
+            ><span class="summer-word">BIKE</span><br /><em>RIDE</em
+            ><br /><strong>REPEAT.</strong>
+          </h1>
+          <p class="hero-text reveal">
+            Location et pro shop au pied des pistes. Du ski au fatbike, l’équipe
+            prépare le matériel qui colle à votre terrain.
+          </p>
         </div>
-        <a class="contact-cta" href="https://www.ski-republic.com/stations-ski/la-joue-du-loup/v8-shop" target="_blank" rel="noopener"><span>Réserver mes skis</span><i>↗</i></a>
-      </div>
-    </section>
-  </main>
+        <div class="hero-machine" data-tilt>
+          <div class="v8-core"><span>V</span><b>8</b></div>
+          <div class="ring ring-a"></div>
+          <div class="ring ring-b"></div>
+          <div class="ring ring-c"></div>
+          <div class="telemetry">
+            <span>ALT</span><b>1500</b><small>M</small>
+          </div>
+        </div>
+        <div class="hero-side">
+          <span>SCROLL TO DROP</span><i></i><b>05° 52' 20" E</b>
+        </div>
+        <div class="ticker">
+          <div>
+            <span>SKI ALPIN</span><i>✦</i><span>SNOWBOARD</span><i>✦</i
+            ><span>SNOWSCOOT</span><i>✦</i><span>FATBIKE</span><i>✦</i
+            ><span>VTT ÉLECTRIQUE</span><i>✦</i>
+          </div>
+          <div aria-hidden="true">
+            <span>SKI ALPIN</span><i>✦</i><span>SNOWBOARD</span><i>✦</i
+            ><span>SNOWSCOOT</span><i>✦</i><span>FATBIKE</span><i>✦</i
+            ><span>VTT ÉLECTRIQUE</span><i>✦</i>
+          </div>
+        </div>
+      </section>
 
-  <footer><a href="#top" class="logo brand-photo"><img src="assets/logo-original.webp" alt="V8 Shop"></a><p>SKI / VTT / FATBIKE / PRO SHOP</p><div><a href="location.html">Location</a><a href="atelier.html">Atelier</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div></footer>
-  <a class="mobile-call" href="tel:+33492218051">Appeler V8 · 04 92 21 80 51</a>
-  <script src="app.js"></script>
+      <section class="intro" id="rental">
+        <div class="intro-label reveal">
+          <span>01</span>
+          <p>Terrain first</p>
+        </div>
+        <div class="intro-copy">
+          <h2 class="line-reveal">
+            Le bon matériel.<br /><em>Le bon réglage.</em><br />Zéro détour.
+          </h2>
+          <div class="intro-bottom reveal">
+            <p>
+              Sur le front de neige, l’équipe V8 vous oriente vers l’équipement
+              adapté à votre niveau et à votre pratique, hiver comme été.
+            </p>
+            <a href="#ranges">Choisir son ride <span>↘</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="split-scene">
+        <figure class="photo-panel image-in">
+          <img
+            src="assets/fatbike.webp"
+            alt="Groupe équipé de fatbikes devant V8 Shop"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>MODE // TERRE</span><b>Fatbike électrique</b>
+          </figcaption>
+        </figure>
+        <div class="data-panel">
+          <div class="radar" aria-hidden="true">
+            <i></i><i></i><i></i><span></span>
+          </div>
+          <p class="reveal">DEUX SAISONS<br />UN SEUL POINT DE DÉPART</p>
+          <div class="data-row">
+            <span>ÉQUIPEMENT</span><b id="gear-label">SKI / SNOW</b>
+          </div>
+          <div class="data-row">
+            <span>TERRAIN</span><b id="terrain-label">100 KM DE PISTES</b>
+          </div>
+          <div class="data-row"><span>DÉPART</span><b>FRONT DE NEIGE</b></div>
+        </div>
+      </section>
+
+      <section class="ranges" id="ranges">
+        <div class="section-head reveal">
+          <span>02 / LE MATÉRIEL</span>
+          <h2>Pick your<br /><em>line.</em></h2>
+          <p>
+            La disponibilité et les gammes exactes sont à confirmer en magasin.
+            Réservation ski via Ski Republic.
+          </p>
+        </div>
+        <div class="range-list">
+          <article class="range-card reveal" data-index="01">
+            <div class="range-icon skis" aria-hidden="true"><i></i><i></i></div>
+            <span>HIVER</span>
+            <h3>Ski alpin</h3>
+            <p>Du débutant au skieur confirmé.</p>
+            <b>01</b>
+          </article>
+          <article class="range-card reveal" data-index="02">
+            <div class="range-icon board" aria-hidden="true"><i></i></div>
+            <span>HIVER</span>
+            <h3>Snowboard</h3>
+            <p>Planches, boots et casques.</p>
+            <b>02</b>
+          </article>
+          <article class="range-card reveal" data-index="03">
+            <div class="range-icon wheel" aria-hidden="true"><i></i></div>
+            <span>4 SAISONS</span>
+            <h3>Fatbike</h3>
+            <p>Assistance électrique, gros grip.</p>
+            <b>03</b>
+          </article>
+          <article class="range-card reveal" data-index="04">
+            <div class="range-icon frame" aria-hidden="true"><i></i></div>
+            <span>ÉTÉ</span>
+            <h3>VTT</h3>
+            <p>Enduro, DH et assistance électrique.</p>
+            <b>04</b>
+          </article>
+        </div>
+      </section>
+
+      <section class="workshop" id="workshop">
+        <figure class="workshop-photo image-in">
+          <img
+            src="assets/interior.webp"
+            alt="Intérieur et espace équipement V8 Shop"
+            loading="lazy"
+          />
+        </figure>
+        <div class="workshop-copy">
+          <p class="mono reveal">03 / WORKSHOP</p>
+          <h2 class="line-reveal">Affûté.<br />Réglé.<br /><em>Prêt.</em></h2>
+          <p class="reveal">
+            Entretien du matériel et vente technique : le shop accompagne la
+            glisse avant, pendant et après la sortie.
+          </p>
+          <ul class="service-list">
+            <li class="reveal">
+              <span>01</span> Entretien ski & snowboard <i>↗</i>
+            </li>
+            <li class="reveal">
+              <span>02</span> Réglage selon le niveau <i>↗</i>
+            </li>
+            <li class="reveal">
+              <span>03</span> Accessoires & casques <i>↗</i>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="shop" id="shop">
+        <div class="shop-top">
+          <p class="mono reveal">04 / PRO SHOP</p>
+          <h2 class="line-reveal">Performance<br /><em>inside.</em></h2>
+        </div>
+        <div class="shop-gallery">
+          <figure class="image-in">
+            <img
+              src="assets/skis.webp"
+              alt="Parc de skis disponible devant V8 Shop"
+              loading="lazy"
+            />
+            <figcaption>Parc ski</figcaption>
+          </figure>
+          <figure class="image-in">
+            <img
+              src="assets/sign.webp"
+              alt="Enseigne V8 Shop location ski et VTT"
+              loading="lazy"
+            />
+            <figcaption>V8 Shop</figcaption>
+          </figure>
+          <div class="brand-block reveal">
+            <span>PRO SHOP</span><b>OAKLEY<br />FOX<br />HEAD<br />K2</b>
+            <p>Marques visibles sur la signalétique officielle du magasin.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-photo">
+          <img
+            src="assets/shop.webp"
+            alt="V8 Shop sur le front de neige de La Joue du Loup"
+            loading="lazy"
+          />
+        </div>
+        <div class="contact-overlay"></div>
+        <div class="contact-content">
+          <p class="mono reveal">FRONT DE NEIGE · 1500 M</p>
+          <h2>Ready to<br /><em>ride?</em></h2>
+          <div class="contact-grid">
+            <div class="reveal">
+              <span>V8 SHOP</span>
+              <p>Place des Argousiers<br />05250 La Joue du Loup</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=V8+Shop+La+Joue+du+Loup"
+                target="_blank"
+                rel="noopener"
+                >Itinéraire ↗</a
+              >
+            </div>
+            <div class="reveal">
+              <span>CONTACT</span>
+              <p>
+                <a href="tel:+33492218051">04 92 21 80 51</a><br /><a
+                  href="tel:+33641618139"
+                  >06 41 61 81 39</a
+                >
+              </p>
+            </div>
+            <div class="reveal">
+              <span>OUVERTURE ANNONCÉE</span>
+              <p>7 jours sur 7<br />08:30 — 19:00</p>
+              <small>Sur les périodes saisonnières officielles.</small>
+            </div>
+          </div>
+          <a
+            class="contact-cta"
+            href="https://www.ski-republic.com/stations-ski/la-joue-du-loup/v8-shop"
+            target="_blank"
+            rel="noopener"
+            ><span>Réserver mes skis</span><i>↗</i></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#top" class="logo brand-photo"
+        ><img src="assets/logo-original.webp" alt="V8 Shop"
+      /></a>
+      <p>SKI / VTT / FATBIKE / PRO SHOP</p>
+      <div>
+        <a href="location.html">Location</a><a href="atelier.html">Atelier</a
+        ><a href="contact.html">Contact</a
+        ><a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </footer>
+    <a class="mobile-call" href="tel:+33492218051"
+      >Appeler V8 · 04 92 21 80 51</a
+    >
+    <script src="app.js"></script>
+<script src="site-enhance.js"></script>
 </body>
 </html>
