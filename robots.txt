@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://v8-shop-devoluy.pages.dev/sitemap.xml
