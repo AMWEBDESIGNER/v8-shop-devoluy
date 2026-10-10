@@ -48,3 +48,7 @@ Les photographies proviennent des sources touristiques publiques et restent la p
 - mentions légales, SIRET, courriel et responsable de publication.
 
 Site statique, sans étape de compilation.
+
+## Motion design et provenance du code
+
+Animations réalisées en CSS vanilla, avec respect de `prefers-reduced-motion`, et une révélation progressive inspirée du pattern public [Scroll animation: IntersectionObserver and CSS](https://codepen.io/oscar-jite/pen/qBzwOVq). La logique reste locale, légère et adaptée à l’identité de chaque établissement ; aucune dépendance payante ni contenu généré n’est requis.
